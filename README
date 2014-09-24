@@ -54,7 +54,7 @@ xml.tag('personlist', function() { xml.tag('person', 'bob')}) => <personlist><pe
 xml.tag('person', {name: 'bob'}) => <person name="bob">
 ```
 
-*Warning: You cannot use reserved words like "class" unless you stringify them. E.g.,*
+*Warning: You cannot use reserved words like "class" unless you stringify them, e.g.:*
 
 ```javascript
 xml.tag('ul', {'class': 'menu'}, function() { etc. });
@@ -75,7 +75,7 @@ xml.tag('th', function() {
 	  column sorting <img src="images/spacer.gif" class="sortdown"/>
 	</th>
 
-### Tag with multiple contained things (complicted example)
+### Tag with multiple contained things (complicated example)
 
 ```javascript
 xml.tag('table', function() {
@@ -124,7 +124,7 @@ You are encouraged to read the tests for a pretty good overview
 of what this package does.
 
 This code is inspired by the **Builder::XmlMarkup** code (originally
-by Jim Weirich). Because Javascript cannot create magic methods,
+by Jim Weirich). Because JavaScript cannot create magic methods,
 one method steps in to take the place of many. That is "tag".
 Here is a comparison from the last example between the Ruby
 implementation and this one:
@@ -143,7 +143,7 @@ xml.table {
     elements = Element.all # assume ActiveRecord or Datamapper or whatever model "Element"
     elements.each |element| {
       xml.tr {
-        xml.td element.earch
+        xml.td element.earth
         xml.td element.wind
         xml.td element.fire
       }
@@ -152,7 +152,7 @@ xml.table {
 }
 ```
 
-Some attempts have been made to protect you from youself (like HTML-escaping strings)
+Some attempts have been made to protect you from yourself (like HTML-escaping strings)
 and attributes. However, you are still free to shoot yourself in the foot, and it is
 easy to generate invalid markup. You still need to think before coding. Sorry.
 
